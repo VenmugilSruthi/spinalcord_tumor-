@@ -1,0 +1,13 @@
+Environment variables
+.env
+*.env
+
+Python virtual environment
+/BACKEND/venv/
+
+Python cache
+/BACKEND/pycache/
+/BACKEND/routes/pycache/
+
+IDE folders
+.vscode/
