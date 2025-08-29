@@ -10,3 +10,4 @@ google-auth==2.16.0
 torch
 torchvision
 Pillow
+Flask-Bcrypt==1.0.1
