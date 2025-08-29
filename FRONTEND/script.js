@@ -63,7 +63,7 @@ async function processInput() {
   userInput.value = "";
 
   try {
-    const response = await fetch('http://127.0.0.1:5000/api/chatbot/ask', {
+    const response = await fetch('https://spinal-tumor-api.onrender.com/api/chatbot/ask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ async function handleGoogleSignIn(response) {
   };
 
   try {
-    const res = await fetch('http://127.0.0.1:5000/api/auth/google-login', {
+    const res = await fetch('https://spinal-tumor-api.onrender.com/api/auth/google-login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('signUpPassword').value;
 
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/auth/register', {
+                const response = await fetch('https://spinal-tumor-api.onrender.com/api/auth/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, password }),
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('signInPassword').value;
 
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/auth/login', {
+                const response = await fetch('https://spinal-tumor-api.onrender.com/api/auth/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),
@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('mriScan', currentFile);
 
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/predict/upload', {
+                const response = await fetch('https://spinal-tumor-api.onrender.com/api/predict/upload', {
                     method: 'POST',
                     body: formData,
                 });
